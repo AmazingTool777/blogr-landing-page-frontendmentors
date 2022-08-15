@@ -1,0 +1,24 @@
+@use "variables/spacings";
+
+/* Container */
+.container {
+  width: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 spacings.getSpacing(2);
+}
+
+/* 
+* 2 columns splitter
+*/
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    width: 100%;
+  }
+}
+
+/* * */
