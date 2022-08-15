@@ -1,5 +1,11 @@
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// Resets
+@forward "resets";
+
+// Base styles
+@forward "base";
+
+// Utility classes styles
+@forward "utils";
+
+// Features' styles
+@forward "features";
