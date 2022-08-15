@@ -1,0 +1,32 @@
+@use "variables/typography" as t;
+
+/* 
+* TYPOGRAPHY
+*/
+
+// Defines a font-face
+@mixin fontFace($family, $weight, $src) {
+    font-family: $family;
+    font-weight: $weight;
+    src: $src;
+}
+
+// Body font-face
+@each $weight, $src in map-get(t.$body, "weights") {
+  @font-face {
+    @include fontFace(map-get(t.$body, "family"), $weight, $src);
+  }
+}
+
+// Actions/Links font-face
+@each $weight, $src in map-get(t.$actions, "weights") {
+  @font-face {
+    @include fontFace(map-get(t.$actions, "family"), $weight, $src);
+  }
+}  
+
+body {
+  font-family: map-get(t.$body, "family");
+}
+
+/* * */
