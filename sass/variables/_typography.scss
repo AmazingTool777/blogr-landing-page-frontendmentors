@@ -1,0 +1,39 @@
+/* 
+* FONT-FAMILIES
+*/
+
+// Body font face
+$body: (
+  "family": Overpass,
+  "weights": (
+    300: url("../../assets/fonts/Overpass/static/Overpass-Light.ttf"),
+    600: url("../../assets/fonts/Overpass/static/Overpass-Medium.ttf"),
+  )
+);
+
+// Actions/Links font face
+$actions: (
+  "family": Ubuntu,
+  "weights": (
+    400: url("../../assets/fonts/Ubuntu/Ubuntu-Regular.ttf"),
+    500: url("../../assets/fonts/Ubuntu/Ubuntu-Medium.ttf"),
+    700: url("../../assets/fonts/Ubuntu/Ubuntu-Bold.ttf"),
+  )
+);
+
+/* * */
+
+
+/* 
+* FONT-SIZES
+*/
+
+// Font-size values
+$sizes: 0 1rem 1.125rem 1.25rem 1.75rem 2.25rem 2.5rem 4rem;
+
+// Font-size getter
+@function getFontSize($i) {
+  @return nth(sizes, $i);
+}
+
+/* * */

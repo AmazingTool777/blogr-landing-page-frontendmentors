@@ -1,0 +1,18 @@
+@use "sass:math";
+
+// Spacing hierarchy values
+$start: math.div(1rem, 1.5); /* 8px */
+$values: [];
+
+// Computes the hierachy values to the list
+@for $i from 0 through 7 {
+  $value: $start * math.pow(1.5, $i);
+  $values: append($values, $value);
+}
+
+// Getter of the spacings
+@function getSpacing($i) {
+  @if ($i > 0) {
+    @return nth($values, $i);
+  }
+}
