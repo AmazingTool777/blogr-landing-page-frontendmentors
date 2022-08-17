@@ -1,0 +1,43 @@
+@use '../variables/spacings' as s;
+@use '../variables/colors' as c;
+@use '../variables/typography' as t;
+
+.btn {
+  --text-color: #fff;
+  --bg-color: transparent;
+
+  padding: s.getSpacing(2) s.getSpacing(3);
+  font-weight: 600;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: s.getSpacing(4);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  // Modifer: Filled button
+  &--fill {
+    --text-color: #{c.getColor(c.$primary, "light-red")};
+    --bg-color: #fff;
+
+    border-color: var(--bg-color);
+
+    &:hover {
+      --text-color: #fff;
+      --bg-color: #{c.getColor(c.$primary, "very-light-red")};
+    }
+  }
+
+  // Modifier: Outlined button
+  &--outline {
+    --text-color: #fff;
+
+    border-color: var(--text-color);
+
+    &:hover {
+      --text-color: #{c.getColor(c.$primary, "light-red")};
+      --bg-color: #fff;
+
+      border-color: var(--bg-color);
+    }
+  }
+}

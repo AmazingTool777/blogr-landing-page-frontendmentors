@@ -1,12 +1,13 @@
-@use "variables/spacings";
+@use "variables/spacings" as s;
 
 /* Container */
 .container {
   width: auto;
   margin: 0 auto;
   max-width: 100%;
-  padding: 0 spacings.getSpacing(2);
+  padding: 0 s.getSpacing(2);
 }
+
 
 /* 
 * 2 columns splitter
@@ -19,6 +20,36 @@
   > * {
     width: 100%;
   }
+}
+
+/* * */
+
+
+/* 
+* FLEX
+*/
+
+.flex {
+  display: flex;
+}
+
+.justity-center {
+  justify-content: center;
+}
+
+/* * */
+
+
+/* 
+* SPACINGS
+*/
+
+// Margin
+.ml-2 {
+  margin-left: s.getSpacing(2);
+}
+.mr-4 {
+  margin-right: s.getSpacing(2);
 }
 
 /* * */

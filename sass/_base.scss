@@ -23,7 +23,7 @@
   @font-face {
     @include fontFace(map-get(t.$actions, "family"), $weight, $src);
   }
-}  
+}
 
 body {
   font-family: map-get(t.$body, "family");
@@ -31,3 +31,15 @@ body {
 }
 
 /* * */
+
+
+// Anchors font-family
+a, button {
+  font-family: map-get(t.$actions, "family");
+}
+
+
+// Transition duration
+* {
+  transition: 0.3s;
+}
