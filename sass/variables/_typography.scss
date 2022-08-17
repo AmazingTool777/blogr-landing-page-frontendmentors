@@ -30,10 +30,11 @@ $actions: (
 
 // Font-size values
 $sizes: 0 1rem 1.125rem 1.25rem 1.75rem 2.25rem 2.5rem 4rem;
+/* 0px, 16px, 18px, 20px, 28px, 36px, 40px, 64px */
 
 // Font-size getter
 @function getFontSize($i) {
-  @return nth(sizes, $i);
+  @return nth($sizes, $i);
 }
 
 /* * */
