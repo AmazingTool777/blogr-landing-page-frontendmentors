@@ -105,6 +105,11 @@ a, button {
   margin-right: 1rem;
 }
 
+.px-1 {
+  padding-left: 0.6666666667rem;
+  padding-right: 0.6666666667rem;
+}
+
 /* * */
 .btn {
   --text-color: #fff;
@@ -136,14 +141,22 @@ a, button {
   border-color: var(--bg-color);
 }
 
+/* 576px */
+/* 776px */
+/* 992px */
+/* 1200px */
 #main-header {
+  --img-bg-position: 35% 30%;
+  --img-bg-size: 350%;
+  --intro-font-size: 2.25rem; /* 36px */
   height: 37.5rem; /* 600px */
   padding-top: 3.375rem;
-  background: url("../../assets/images/bg-pattern-intro.svg") 35% 30% no-repeat, linear-gradient(to bottom right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
-  background-size: 350%, cover;
+  background: url("../../assets/images/bg-pattern-intro.svg") var(--img-bg-position) no-repeat, linear-gradient(to bottom right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  background-size: var(--img-bg-size), cover;
   color: #fff;
+  /* Styling the main container in the context of the navbar / Hero */
 }
-#main-header .container {
+#main-header .hero {
   position: relative;
   height: 100%;
   display: flex;
@@ -153,11 +166,37 @@ a, button {
 }
 #main-header .intro {
   font-weight: 600;
-  font-size: 2.25rem; /* 36px */
-  margin-bottom: 1.5rem;
+  font-size: var(--intro-font-size);
+  margin-bottom: 1rem;
 }
 #main-header .sub-intro {
   font-weight: 300;
   font-size: 1.125rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 3.375rem;
+}
+
+@media only screen and (min-width: 36rem) {
+  #main-header {
+    --img-bg-position: 35% 45%;
+    --img-bg-size: 300%;
+  }
+}
+@media only screen and (min-width: 48.5rem) {
+  #main-header {
+    --img-bg-position: 30% 50%;
+    --img-bg-size: 280%;
+    --intro-font-size: 2.5rem; /* 40px */
+  }
+}
+@media only screen and (min-width: 62rem) {
+  #main-header {
+    --img-bg-size: 260%;
+    --intro-font-size: 4rem; /* 64px */
+    padding-top: 3.5rem; /* 56px */
+  }
+}
+@media only screen and (min-width: 75rem) {
+  #main-header {
+    --img-bg-size: 240%;
+  }
 }/*# sourceMappingURL=main.css.map */

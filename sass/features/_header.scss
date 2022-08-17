@@ -1,23 +1,34 @@
 @use "../variables/spacings" as s;
 @use "../variables/colors" as c;
 @use "../variables/typography" as t;
+@use "../mixins" as *;
+
+$sm: 36rem; /* 576px */
+$md: 48.5rem; /* 776px */
+$lg: 62rem; /* 992px */
+$xlg: 75rem; /* 1200px */
 
 #main-header {
   $padding-top: s.getSpacing(5);
 
+  --img-bg-position: 35% 30%;
+  --img-bg-size: 350%;
+  --intro-font-size: #{t.getFontSize(6)}; /* 36px */
+
   height: 37.5rem; /* 600px */
   padding-top: s.getSpacing(5);
   background:
-    url("../../assets/images/bg-pattern-intro.svg") 35% 30% no-repeat,
+    url("../../assets/images/bg-pattern-intro.svg") var(--img-bg-position) no-repeat,
     linear-gradient(
       to bottom right,
       c.getColor(c.$gradient, "light-red"),
       c.getColor(c.$gradient, "very-light-red")
     );
-  background-size: 350%, cover;
+  background-size: var(--img-bg-size), cover;
   color: #fff;
 
-  .container {
+  /* Styling the main container in the context of the navbar / Hero */
+  .hero {
     position: relative; // For the navbar positioning
     height: 100%;
     display: flex;
@@ -28,13 +39,43 @@
 
   .intro {
     font-weight: 600;
-    font-size: t.getFontSize(6); /* 36px */
-    margin-bottom: s.getSpacing(3);
+    font-size: var(--intro-font-size);
+    margin-bottom: s.getSpacing(2);
   }
 
   .sub-intro {
     font-weight: 300;
     font-size: t.getFontSize(3);
-    margin-bottom: s.getSpacing(4);
+    margin-bottom: s.getSpacing(5);
+  }
+}
+
+@include min-viewport($sm) {
+  #main-header {
+    --img-bg-position: 35% 45%;
+    --img-bg-size: 300%;
+  }
+}
+
+@include min-viewport($md) {
+  #main-header {
+    --img-bg-position: 30% 50%;
+    --img-bg-size: 280%;
+    --intro-font-size: #{t.getFontSize(7)}; /* 40px */
+  }
+}
+
+@include min-viewport($lg) {
+  #main-header {
+    --img-bg-size: 260%;
+    --intro-font-size: #{t.getFontSize(8)}; /* 64px */
+
+    padding-top: 3.5rem; /* 56px */
+  }
+}
+
+@include min-viewport($xlg) {
+  #main-header {
+    --img-bg-size: 240%;
   }
 }

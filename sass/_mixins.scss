@@ -1,0 +1,6 @@
+// Media query for min-width based viewport
+@mixin min-viewport($min-width) {
+  @media only screen and (min-width: $min-width) {
+    @content;
+  }
+}
