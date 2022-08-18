@@ -1,12 +1,8 @@
 @use "../variables/spacings" as s;
 @use "../variables/colors" as c;
 @use "../variables/typography" as t;
+@use "../variables/breakpoints" as bp;
 @use "../mixins" as *;
-
-$sm: 36rem; /* 576px */
-$md: 48.5rem; /* 776px */
-$lg: 62rem; /* 992px */
-$xlg: 75rem; /* 1200px */
 
 #main-header {
   $padding-top: s.getSpacing(5);
@@ -50,14 +46,14 @@ $xlg: 75rem; /* 1200px */
   }
 }
 
-@include min-viewport($sm) {
+@include min-viewport(bp.$sm) {
   #main-header {
     --img-bg-position: 35% 45%;
     --img-bg-size: 300%;
   }
 }
 
-@include min-viewport($md) {
+@include min-viewport(bp.$md) {
   #main-header {
     --img-bg-position: 30% 50%;
     --img-bg-size: 280%;
@@ -65,7 +61,7 @@ $xlg: 75rem; /* 1200px */
   }
 }
 
-@include min-viewport($lg) {
+@include min-viewport(bp.$lg) {
   #main-header {
     --img-bg-size: 260%;
     --intro-font-size: #{t.getFontSize(8)}; /* 64px */
@@ -74,7 +70,7 @@ $xlg: 75rem; /* 1200px */
   }
 }
 
-@include min-viewport($xlg) {
+@include min-viewport(bp.$xlg) {
   #main-header {
     --img-bg-size: 240%;
   }
