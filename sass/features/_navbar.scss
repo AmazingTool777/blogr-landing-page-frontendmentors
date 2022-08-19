@@ -1,0 +1,99 @@
+@use "../variables/spacings" as s;
+@use "../variables/typography" as t;
+@use "../variables/colors" as c;
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &__brand {
+    width: 5.25rem; /* 84px */
+  }
+
+  &__toggle {
+    .close-icon {
+      display: none;
+    }
+
+    &.toggle-open {
+      .toggle-icon {
+        display: none;
+      }
+
+      .close-icon {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__menu {
+    // 100 % of the bar
+    // minus the padding-3 of both sides
+    $menu-width: calc(100% - 2 * #{s.getSpacing(3)});
+
+    position: absolute;
+    top: 100%;
+    left: s.getSpacing(3);
+    margin-top: 2rem; // 32px
+    padding:  s.getSpacing(3);
+    width: $menu-width;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 2rem rgba(32, 32, 32, 0.3);
+    font-family: t.getFontFamily("secondary");
+  }
+
+  &__links {
+    padding-bottom: s.getSpacing(3);
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  &__link {
+    padding: s.getSpacing(2);
+    width: 100%;
+    font-size: t.getFontSize(3);
+    color: c.getColor(c.$primary, "very-dark-blue");
+    font-weight: 600;
+
+    /* Common styles accross hover and open dropdown states */
+    &:hover, &.toggle-open {
+      opacity: 0.7;
+      transform: scale(0.98);
+    }
+
+    // Rotate the arrow to the up when the dropdown menu is open
+    &.toggle-open .navbar__arrow {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__arrow {
+    vertical-align: middle;
+    margin-left: 0.25rem;
+    transform: rotate(0deg);
+  }
+
+  &__submenu {
+    background-color: #EFEFF1;
+  }
+
+  &__sublink {
+    color: c.getColor(c.$primary, "very-dark-blue");
+    opacity: 0.7;
+    font-weight: 600;
+    width: 100%;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__auth-links {
+    padding-top: s.getSpacing(2);
+    padding-bottom: s.getSpacing(1);
+
+    a {
+      font-size: inherit;
+    }
+  }
+}

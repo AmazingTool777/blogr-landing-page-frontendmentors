@@ -10,6 +10,16 @@ a {
   cursor: pointer;
 }
 
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
 /* 
 * FONT-FAMILIES
 */
@@ -23,6 +33,21 @@ a {
 * TYPOGRAPHY
 */
 @font-face {
+  font-family: Ubuntu;
+  font-weight: 400;
+  src: url("../../assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 500;
+  src: url("../../assets/fonts/Ubuntu/Ubuntu-Medium.ttf");
+}
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 700;
+  src: url("../../assets/fonts/Ubuntu/Ubuntu-Bold.ttf");
+}
+@font-face {
   font-family: Overpass;
   font-weight: 300;
   src: url("../../assets/fonts/Overpass/static/Overpass-Light.ttf");
@@ -32,29 +57,14 @@ a {
   font-weight: 600;
   src: url("../../assets/fonts/Overpass/static/Overpass-Medium.ttf");
 }
-@font-face {
-  font-family: "Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
-  font-weight: 400;
-  src: url("../../assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
-}
-@font-face {
-  font-family: "Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
-  font-weight: 500;
-  src: url("../../assets/fonts/Ubuntu/Ubuntu-Medium.ttf");
-}
-@font-face {
-  font-family: "Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
-  font-weight: 700;
-  src: url("../../assets/fonts/Ubuntu/Ubuntu-Bold.ttf");
-}
 body {
-  font-family: Overpass;
+  font-family: Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
 }
 
 /* * */
-a, button {
-  font-family: "Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+a {
+  display: inline-block;
 }
 
 * {
@@ -62,12 +72,24 @@ a, button {
 }
 
 /* 8px */
-/* Container */
+/* 576px */
+/* 776px */
+/* 992px */
+/* 1200px */ /* Container */
 .container {
   width: auto;
   margin: 0 auto;
   max-width: 100%;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+}
+@media only screen and (min-width: 62rem) {
+  .container {
+    max-width: 69.75rem; /* 1116px */
+  }
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 /* 
@@ -93,21 +115,105 @@ a, button {
   justify-content: center;
 }
 
+.justity-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
 /* * */
 /* 
 * SPACINGS
 */
+.ml-1 {
+  margin-left: 0.6666666667rem;
+}
+
+.mr-1 {
+  margin-right: 0.6666666667rem;
+}
+
 .ml-2 {
   margin-left: 1rem;
 }
 
-.mr-4 {
+.mr-2 {
   margin-right: 1rem;
 }
 
 .px-1 {
   padding-left: 0.6666666667rem;
   padding-right: 0.6666666667rem;
+}
+
+.px-3 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-1 {
+  padding-top: 0.6666666667rem;
+  padding-bottom: 0.6666666667rem;
+}
+
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* * */
+/* 
+* RESPONSIVE DISPLAY
+*/
+@media only screen and (max-width: calc(62rem - 1px)) {
+  .hide-mobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  .show-desktop {
+    display: block;
+  }
+  .hide-desktop {
+    display: none;
+  }
+}
+/* * */
+/* 
+* WIDTH
+*/
+.w-100 {
+  width: 100%;
+}
+
+/* * */
+/* 
+* POSITIONING
+*/
+.position-relative {
+  position: relative;
+}
+
+/* * */
+/* 
+* ROUNDED CORNERS
+*/
+.rounded-sm {
+  border-radius: 5px;
+}
+
+/* * */
+/* 
+* LINE-HEIGHT
+*/
+.lh-1 {
+  line-height: 1;
 }
 
 /* * */
@@ -140,11 +246,19 @@ a, button {
   --bg-color: #fff;
   border-color: var(--bg-color);
 }
+.btn--gradient {
+  --bg-color: linear-gradient(to bottom right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  background: var(--bg-color);
+  padding: 1rem 2.25rem;
+}
+.btn--gradient:hover {
+  opacity: 0.8;
+}
 
-/* 576px */
-/* 776px */
-/* 992px */
-/* 1200px */
+.dropdown-open {
+  display: block !important;
+}
+
 #main-header {
   --img-bg-position: 35% 30%;
   --img-bg-size: 350%;
@@ -199,4 +313,75 @@ a, button {
   #main-header {
     --img-bg-size: 240%;
   }
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.navbar__brand {
+  width: 5.25rem; /* 84px */
+}
+.navbar__toggle .close-icon {
+  display: none;
+}
+.navbar__toggle.toggle-open .toggle-icon {
+  display: none;
+}
+.navbar__toggle.toggle-open .close-icon {
+  display: inline-block;
+}
+.navbar__menu {
+  position: absolute;
+  top: 100%;
+  left: 1.5rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  width: calc(100% - 2 * 1.5rem);
+  background-color: #fff;
+  box-shadow: 0 0.5rem 2rem rgba(32, 32, 32, 0.3);
+  font-family: Overpass;
+}
+.navbar__links {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #E5E5E5;
+}
+.navbar__link {
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.125rem;
+  color: hsl(208deg, 49%, 24%);
+  font-weight: 600;
+  /* Common styles accross hover and open dropdown states */
+}
+.navbar__link:hover, .navbar__link.toggle-open {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+.navbar__link.toggle-open .navbar__arrow {
+  transform: rotate(-180deg);
+}
+.navbar__arrow {
+  vertical-align: middle;
+  margin-left: 0.25rem;
+  transform: rotate(0deg);
+}
+.navbar__submenu {
+  background-color: #EFEFF1;
+}
+.navbar__sublink {
+  color: hsl(208deg, 49%, 24%);
+  opacity: 0.7;
+  font-weight: 600;
+  width: 100%;
+}
+.navbar__sublink:hover {
+  opacity: 1;
+}
+.navbar__auth-links {
+  padding-top: 1rem;
+  padding-bottom: 0.6666666667rem;
+}
+.navbar__auth-links a {
+  font-size: inherit;
 }/*# sourceMappingURL=main.css.map */

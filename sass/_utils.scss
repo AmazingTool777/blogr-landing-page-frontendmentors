@@ -1,11 +1,22 @@
 @use "variables/spacings" as s;
+@use "variables/breakpoints" as bp;
+@use "mixins" as *;
 
 /* Container */
 .container {
   width: auto;
   margin: 0 auto;
   max-width: 100%;
-  padding: 0 s.getSpacing(2);
+  padding: 0 s.getSpacing(3);
+
+  @include min-viewport(bp.$lg) {
+    max-width: 69.75rem; /* 1116px */
+  }
+}
+
+// Display inline-block
+.inline-block {
+  display: inline-block;
 }
 
 
@@ -37,6 +48,18 @@
   justify-content: center;
 }
 
+.justity-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
 /* * */
 
 
@@ -45,10 +68,16 @@
 */
 
 // Margin
+.ml-1 {
+  margin-left: s.getSpacing(1);
+}
+.mr-1 {
+  margin-right: s.getSpacing(1);
+}
 .ml-2 {
   margin-left: s.getSpacing(2);
 }
-.mr-4 {
+.mr-2 {
   margin-right: s.getSpacing(2);
 }
 
@@ -56,6 +85,85 @@
 .px-1 {
   padding-left: s.getSpacing(1);
   padding-right: s.getSpacing(1);
+}
+.px-3 {
+  padding-left: s.getSpacing(3);
+  padding-right: s.getSpacing(3);
+}
+.py-1 {
+  padding-top: s.getSpacing(1);
+  padding-bottom: s.getSpacing(1);
+}
+.py-2 {
+  padding-top: s.getSpacing(2);
+  padding-bottom: s.getSpacing(2);
+}
+
+/* * */
+
+
+/* 
+* RESPONSIVE DISPLAY
+*/
+
+@include max-viewport(calc(bp.$lg - 1px)) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@include min-viewport(bp.$lg) {
+  .show-desktop {
+    display: block;
+  }
+
+  .hide-desktop {
+    display: none;
+  }
+}
+
+/* * */
+
+
+/* 
+* WIDTH
+*/
+
+.w-100 {
+  width: 100%;
+}
+
+/* * */
+
+
+/* 
+* POSITIONING
+*/
+
+.position-relative {
+  position: relative;
+}
+
+/* * */
+
+
+/* 
+* ROUNDED CORNERS
+*/
+
+.rounded-sm {
+  border-radius: 5px;
+}
+
+/* * */
+
+
+/* 
+* LINE-HEIGHT
+*/
+
+.lh-1 {
+  line-height: 1;
 }
 
 /* * */

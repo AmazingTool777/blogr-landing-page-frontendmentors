@@ -4,3 +4,10 @@
     @content;
   }
 }
+
+// Media query for max-width based viewport
+@mixin max-viewport($max-width) {
+  @media only screen and (max-width: $max-width) {
+    @content;
+  }
+}

@@ -8,13 +8,67 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <!-- HEADER -->
   <header id="main-header" >
-    <div class="container hero">
+    <div class="hero | container">
+
+      <!-- Navbar -->
+      <nav id="navbar" class="navbar | px-3 flex justity-between items-center w-100" >
+        <a href="#" class="navbar__brand | inline-block">
+          <img src="assets/images/logo.svg" alt="Blogr brand" class="w-100 inline-block">
+        </a>
+        <button type="button" data-toggle="navbar-menu" class="navbar__toggle | hide-desktop">
+          <img src="assets/images/icon-hamburger.svg" alt="Navbar menu hamburger toggle" class="toggle-icon">
+          <img src="assets/images/icon-close.svg" alt="Navbar menu close" class="close-icon">
+        </button>
+        <div id="navbar-menu" class="navbar__menu | hide-mobile show-desktop px-auto rounded-sm">
+          <ul class="navbar__links | flex-fill" >
+            <li>
+              <a href="#" class="navbar__link">
+                Product
+                <picture>
+                  <source media="(min-width: 992px)" srcset="assets/images/icon-arrow-light.svg">
+                  <img src="assets/images/icon-arrow-dark.svg" alt="Navbar link arrow" class="navbar__arrow">
+                </picture>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="navbar__link">
+                Company
+                <picture>
+                  <source media="(min-width: 992px)" srcset="assets/images/icon-arrow-light.svg">
+                  <img src="assets/images/icon-arrow-dark.svg" alt="Navbar link arrow" class="navbar__arrow">
+                </picture>
+              </a>
+            </li>
+            <li class="position-relative">
+              <a href="#" class="navbar__link">
+                Connect
+                <picture>
+                  <source media="(min-width: 992px)" srcset="assets/images/icon-arrow-light.svg">
+                  <img src="assets/images/icon-arrow-dark.svg" alt="Navbar link arrow" class="navbar__arrow">
+                </picture>
+              </a>
+              <ul class="navbar__submenu | rounded-sm py-2" >
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Contact</a></li>
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Newsletter</a></li>
+                <li><a href="#" class="navbar__sublink | px-3 py-1">LinkedIn</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar__auth-links">
+            <li><a href="#" class="navbar__link">Login</a></li>
+            <li><a href="#" class="btn btn--gradient | lh-1">Sign Up</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- HERO and CTA -->
       <h1 class="intro | px-1">A modern publishing platform</h1>
       <p class="sub-intro | px-1">Grow your audience and build your online brand</p>
       <div class="flex justify-center">
-        <a href="#" class="btn btn--fill | mr-2">Start for Free</a>
-        <a href="#" class="btn btn--outline | ml-2">Learn More</a>
+        <a href="#" class="btn btn--fill | mr-1">Start for Free</a>
+        <a href="#" class="btn btn--outline | ml-1">Learn More</a>
       </div>
     </div>
   </header>
