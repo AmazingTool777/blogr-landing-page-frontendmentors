@@ -249,6 +249,7 @@ a {
   --bg-color: linear-gradient(to bottom right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
   background: var(--bg-color);
   padding: 1rem 2.25rem;
+  border-color: transparent;
 }
 .btn--gradient:hover {
   opacity: 0.8;
@@ -451,6 +452,7 @@ a {
     --text-color: hsl(356deg, 100%, 66%);
     margin-left: 1rem;
     font-weight: 500;
+    border-color: var(--bg-color);
   }
   .navbar__auth-links .btn:hover {
     --bg-color: hsl(355deg, 100%, 74%);

@@ -46,6 +46,7 @@
 
     background: var(--bg-color);
     padding: s.getSpacing(2) s.getSpacing(4);
+    border-color: transparent;
     
     &:hover {
       opacity: 0.8;
