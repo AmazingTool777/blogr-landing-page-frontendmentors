@@ -40,4 +40,16 @@
       border-color: var(--bg-color);
     }
   }
+
+  // Modifier: Gradient button
+  &--gradient {
+    --bg-color: linear-gradient(to bottom right, #{c.getColor(c.$gradient, "light-red")}, #{c.getColor(c.$gradient, "very-light-red")});
+
+    background: var(--bg-color);
+    padding: s.getSpacing(2) s.getSpacing(4);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
