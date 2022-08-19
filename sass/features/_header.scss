@@ -44,6 +44,10 @@
     font-size: t.getFontSize(3);
     margin-bottom: s.getSpacing(5);
   }
+
+  .btn {
+    font-family: t.getFontFamily("secondary");
+  }
 }
 
 @include min-viewport(bp.$sm) {

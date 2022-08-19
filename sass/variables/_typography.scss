@@ -4,6 +4,17 @@
 
 // Primary font face
 $primary: (
+  "family": Overpass,
+  "weights": (
+    300: url("../../assets/fonts/Overpass/static/Overpass-Light.ttf"),
+    600: url("../../assets/fonts/Overpass/static/Overpass-Medium.ttf"),
+  )
+);
+
+// Secondary font family
+$secondary-font-family: Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+// Secondary font face
+$secondary: (
   "family": Ubuntu,
   "weights": (
     400: url("../../assets/fonts/Ubuntu/Ubuntu-Regular.ttf"),
@@ -12,21 +23,10 @@ $primary: (
   )
 );
 
-// Secondary font face
-$secondary: (
-  "family": Overpass,
-  "weights": (
-    300: url("../../assets/fonts/Overpass/static/Overpass-Light.ttf"),
-    600: url("../../assets/fonts/Overpass/static/Overpass-Medium.ttf"),
-  )
-);
-
-// Primary font-family
-$primary-font-family: Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 // Font-families
 $font-family: (
-  "primary": $primary-font-family,
-  "secondary": Overpass
+  "primary": Overpass,
+  "secondary": $secondary-font-family
 );
 
 // Font-family getter
