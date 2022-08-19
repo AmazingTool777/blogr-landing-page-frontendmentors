@@ -11,33 +11,31 @@
     src: $src;
 }
 
-// Body font-face
-@each $weight, $src in map-get(t.$body, "weights") {
+// Primary font-face
+@each $weight, $src in map-get(t.$primary, "weights") {
   @font-face {
-    @include fontFace(map-get(t.$body, "family"), $weight, $src);
+    @include fontFace(map-get(t.$primary, "family"), $weight, $src);
   }
 }
 
-// Actions/Links font-face
-@each $weight, $src in map-get(t.$actions, "weights") {
+// Secondary font-face
+@each $weight, $src in map-get(t.$secondary, "weights") {
   @font-face {
-    @include fontFace(map-get(t.$actions, "family"), $weight, $src);
+    @include fontFace(map-get(t.$secondary, "family"), $weight, $src);
   }
 }
 
 body {
-  font-family: map-get(t.$body, "family");
+  font-family: t.getFontFamily("primary");
   text-align: center;
 }
 
 /* * */
 
-
-// Anchors font-family
-a, button {
-  font-family: map-get(t.$actions, "family");
+// Anchors should be inline-block
+a {
+  display: inline-block;
 }
-
 
 // Transition duration
 * {
