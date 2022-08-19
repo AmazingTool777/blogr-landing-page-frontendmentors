@@ -1,6 +1,8 @@
 @use "../variables/spacings" as s;
 @use "../variables/typography" as t;
 @use "../variables/colors" as c;
+@use "../variables/breakpoints" as bp;
+@use "../mixins" as *;
 
 .navbar {
   position: absolute;
@@ -53,6 +55,7 @@
     font-size: t.getFontSize(3);
     color: c.getColor(c.$primary, "very-dark-blue");
     font-weight: 600;
+    transform: scale(1);
 
     /* Common styles accross hover and open dropdown states */
     &:hover, &.toggle-open {
@@ -86,14 +89,98 @@
     &:hover {
       opacity: 1;
     }
+
+    .btn {
+      font-weight: 600;
+    }
   }
+}
 
-  &__auth-links {
-    padding-top: s.getSpacing(2);
-    padding-bottom: s.getSpacing(1);
+@include min-viewport(bp.$lg) {
+  .navbar {
 
-    a {
+    &__brand {
+      width: 6.5rem; /* 104px */
+    }
+
+    &__menu {
+      position: static;
+      margin: 0;
+      padding: 0;
+      padding-left: s.getSpacing(4);
+      width: auto;
+      background: none;
+      box-shadow: none;
+      display: flex;
+      justify-content: space-between;
+      flex: 1 1 auto;
+      font-family: t.getFontFamily("secondary");
+
+      .navbar__links, .navbar__auth-links {
+        display: flex;
+        padding: 0;
+      }
+    }
+
+    &__links {
+      border-bottom: none;
+    }
+
+    &__link {
+      font-weight: 500;
       font-size: inherit;
+      color: #fff;
+      opacity: 0.7;
+      transform: scale(1);
+
+      &:hover, &.toggle-open {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__submenu {
+      background-color: #FFF;
+      width: auto;
+      min-width: 10.5rem; /* 168px */
+      box-shadow: 0 0.5rem 2rem rgba(32, 32, 32, 0.3);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      font-weight: 400;
+      color: c.getColor(c.$neutral, "very-dark-grayish-blue");
+    }
+
+    &__sublink {
+      font-weight: 400;
+      color: c.getColor(c.$neutral, "very-dark-grayish-blue");
+      opacity: 1;
+      transition-duration: 0s;
+  
+      &:hover {
+        font-weight: 700;
+        transition-duration: 0s;
+      }
+    }
+
+    // Sign up link as button component
+    &__auth-links .btn {
+      --bg-color: #fff;
+      --text-color: #{c.getColor(c.$primary, "light-red")};
+
+      margin-left: s.getSpacing(2);
+      font-weight: 500;
+
+      &:hover {
+        --bg-color: #{c.getColor(c.$primary, "very-light-red")};
+        --text-color: #fff;
+
+        border-color: var(--bg-color);
+      }
     }
   }
 }

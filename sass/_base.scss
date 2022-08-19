@@ -1,4 +1,6 @@
 @use "variables/typography" as t;
+@use "variables/breakpoints" as bp;
+@use "mixins" as *;
 
 /* 
 * TYPOGRAPHY
@@ -28,6 +30,10 @@
 body {
   font-family: t.getFontFamily("primary");
   text-align: center;
+
+  @include min-viewport(bp.$lg) {
+    text-align: left;
+  }
 }
 
 /* * */
