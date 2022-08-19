@@ -152,11 +152,6 @@ a {
   margin-right: 1rem;
 }
 
-.px-1 {
-  padding-left: 0.6666666667rem;
-  padding-right: 0.6666666667rem;
-}
-
 .px-3 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -226,7 +221,6 @@ a {
   --text-color: #fff;
   --bg-color: transparent;
   padding: 1rem 1.5rem;
-  font-weight: 600;
   border-width: 1px;
   border-style: solid;
   border-radius: 2.25rem;
@@ -295,6 +289,7 @@ a {
 }
 #main-header .btn {
   font-family: Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
 }
 
 @media only screen and (min-width: 36rem) {
@@ -312,6 +307,7 @@ a {
 }
 @media only screen and (min-width: 62rem) {
   #main-header {
+    --img-bg-position: 26% 51%;
     --img-bg-size: 260%;
     --intro-font-size: 4rem; /* 64px */
     padding-top: 3.5rem; /* 56px */
@@ -387,6 +383,9 @@ a {
 .navbar__sublink:hover {
   opacity: 1;
 }
+.navbar__sublink .btn {
+  font-weight: 600;
+}
 
 @media only screen and (min-width: 62rem) {
   .navbar__brand {
@@ -451,6 +450,7 @@ a {
     --bg-color: #fff;
     --text-color: hsl(356deg, 100%, 66%);
     margin-left: 1rem;
+    font-weight: 500;
   }
   .navbar__auth-links .btn:hover {
     --bg-color: hsl(355deg, 100%, 74%);
