@@ -42,14 +42,14 @@
               </a>
             </li>
             <li class="position-relative">
-              <a href="#" class="navbar__link">
+              <a href="#" class="navbar__link" data-toggle="connect-sublinks">
                 Connect
                 <picture>
                   <source media="(min-width: 992px)" srcset="assets/images/icon-arrow-light.svg">
                   <img src="assets/images/icon-arrow-dark.svg" alt="Navbar link arrow" class="navbar__arrow">
                 </picture>
               </a>
-              <ul class="navbar__submenu | rounded-sm py-2" >
+              <ul id="connect-sublinks" class="navbar__submenu | rounded-sm py-2" >
                 <li><a href="#" class="navbar__sublink | px-3 py-1">Contact</a></li>
                 <li><a href="#" class="navbar__sublink | px-3 py-1">Newsletter</a></li>
                 <li><a href="#" class="navbar__sublink | px-3 py-1">LinkedIn</a></li>
@@ -73,6 +73,6 @@
     </div>
   </header>
   
-  <script src="./js/main.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
 </html>

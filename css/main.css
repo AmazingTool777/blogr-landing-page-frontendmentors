@@ -368,6 +368,7 @@ a {
 }
 .navbar__submenu {
   background-color: #EFEFF1;
+  display: none;
 }
 .navbar__sublink {
   color: hsl(208deg, 49%, 24%);
