@@ -1,5 +1,6 @@
 @use "variables/typography" as t;
 @use "variables/breakpoints" as bp;
+@use "variables/spacings" as s;
 @use "mixins" as *;
 
 /* 
@@ -46,4 +47,15 @@ a {
 // Transition duration
 * {
   transition: 0.3s;
+}
+
+// Spacing variables for sections
+main {
+  --section-spacing-1: 2.75rem; /* 44px */
+  --section-spacing-2: 6.375rem; /* 102px */
+
+  @include min-viewport(bp.$lg) {
+    --section-spacing-1: 4.875rem; /* 78px */
+    --section-spacing-2: 19.125rem; /* 306px */
+  }
 }

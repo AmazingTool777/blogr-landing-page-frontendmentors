@@ -13,7 +13,7 @@
     <div class="hero | container">
 
       <!-- Navbar -->
-      <nav id="navbar" class="navbar | px-3 flex justity-between items-center w-100" >
+      <nav id="navbar" class="navbar | px-3 px-xlg-0 flex justity-between items-center w-100" >
         <a href="#" class="navbar__brand | inline-block">
           <img src="assets/images/logo.svg" alt="Blogr brand" class="w-100 inline-block">
         </a>
@@ -72,6 +72,45 @@
       </div>
     </div>
   </header>
+
+  <main>
+
+    <!-- Designed for the future section -->
+    <section id="designed-for-future" class="future-section | section-py-2 position-relative overflow-hidden" >
+      <h2 class="future-section__title | section-mb-1">Designed for the future</h2>
+      <div class="split split--reverse | container">
+
+        <!-- Illustration -->
+        <div class="illustration illustration--right | section-mb-1 mb-lg-0">
+          <img
+            src="assets/images/illustration-editor-desktop.svg"
+            alt=""
+            srcset="assets/images/illustration-editor-mobile.svg 406w
+            assets/images/illustration-editor-desktop.svg 925w"
+            sizes="(max-width: 991px) 406px, 925px"
+            class="illustration__img"
+          >
+        </div>
+
+        <!-- Articles -->
+        <div class="content">
+          <article class="article | section-mb-1">
+            <h3 class="article__title">Introducing an extensible editor</h3>
+            <p class="article__content">
+              Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.
+            </p>
+          </article>
+          <article class="article">
+            <h3 class="article__title">Robust content management</h3>
+            <p class="article__content">
+              Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format or flow. With this functionality, you're in full control.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+  </main>
   
   <script type="module" src="./js/main.js"></script>
 </body>

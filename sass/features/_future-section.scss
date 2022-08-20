@@ -1,0 +1,26 @@
+@use "../variables/colors" as c;
+@use "../variables/typography" as t;
+@use "../variables/breakpoints" as bp;
+@use "../mixins" as *;
+
+.future-section {
+
+  &__title {
+    font-weight: 600;
+    text-align: center;
+    color: c.getColor(c.$primary, "very-dark-blue");
+    font-size: t.getFontSize(5);
+
+    @include min-viewport(bp.$lg) {
+      --section-spacing-1: 6.5rem; // 104px
+
+      font-size: t.getFontSize(7);
+    }
+  }
+
+  @include min-viewport(bp.$lg) {
+    padding-top: 9.75rem; // 156px
+    padding-bottom: 16.25rem; // 260px
+  }
+
+}
