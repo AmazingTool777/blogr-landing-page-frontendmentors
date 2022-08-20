@@ -1,0 +1,34 @@
+@use "../variables/breakpoints" as bp;
+@use "../mixins" as *;
+
+.illustration {
+  $offset-x: 9.7222222%; /* 140px */
+
+  --height: 87%;
+  --edge-x: calc(50% + #{$offset-x});
+
+  &__img {
+    display: inline-block;
+    // display: none;
+    width: 100%;
+  }
+
+  @include min-viewport(bp.$lg) {
+    &__img {
+      width: auto;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: var(--height);
+    }
+
+    &--left &__img {
+      right: var(--edge-x);
+    }
+
+    &--right &__img {
+      left: var(--edge-x);
+    }
+  }
+
+}

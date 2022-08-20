@@ -1,0 +1,29 @@
+@use "../variables/typography" as t;
+@use "../variables/colors" as c;
+@use "../variables/spacings" as s;
+
+.article {
+  --article-title-color: #{c.getColor(c.$primary, "very-dark-blue")};
+  --article-content-color: #{c.getColor(c.$neutral, "very-dark-grayish-blue")};
+
+  padding-left: s.getSpacing(1);
+  padding-right: s.getSpacing(1);
+  
+  &__title {
+    font-size: t.getFontSize(5);
+    color: var(--article-title-color);
+    font-weight: 600;
+    margin-bottom: 1.125rem; /* 18px */
+  }
+
+  &__content {
+    color: var(--article-content-color);
+    line-height: 1.8;
+  }
+
+  // Light version
+  &--light {
+    --article-title-color: #fff;
+    --article-content-color: #fff;
+  }
+}
