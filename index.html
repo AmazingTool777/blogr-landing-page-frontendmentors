@@ -82,14 +82,10 @@
 
         <!-- Illustration -->
         <div class="illustration illustration--right | section-mb-1 mb-lg-0">
-          <img
-            src="assets/images/illustration-editor-desktop.svg"
-            alt=""
-            srcset="assets/images/illustration-editor-mobile.svg 406w
-            assets/images/illustration-editor-desktop.svg 925w"
-            sizes="(max-width: 991px) 406px, 925px"
-            class="illustration__img"
-          >
+          <picture>
+            <source media="(max-width: 991px)" srcset="assets/images/illustration-editor-mobile.svg">
+            <img src="assets/images/illustration-editor-desktop.svg" alt="" class="illustration__img">
+          </picture>
         </div>
 
         <!-- Articles -->
@@ -125,7 +121,33 @@
         </div>
       </div>
     </article>
-25
+
+    <!-- Section 2 - Second set of articles -->
+    <section class="section-2 | position-relative section-py-2 overflow-hidden" >
+      <div class="split container">
+        <div class="illustration illustration--left | section-mb-1">
+          <picture>
+            <source media="(max-width: 991px)" srcset="assets/images/illustration-laptop-mobile.svg">
+            <img src="assets/images/illustration-laptop-desktop.svg" alt="" class="illustration__img">
+          </picture>
+        </div>
+        <div>
+          <article class="article | section-mb-1">
+            <h3 class="article__title">Free, open, simple</h3>
+            <p class="article__content">
+              Blogr is a free and open-source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+            </p>
+          </article>
+          <article class="article">
+            <h3 class="article__title">Powerful tooling</h3>
+            <p class="article__content">
+              Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
   
   <script type="module" src="./js/main.js"></script>

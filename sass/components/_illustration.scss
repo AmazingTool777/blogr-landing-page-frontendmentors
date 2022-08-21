@@ -2,19 +2,20 @@
 @use "../mixins" as *;
 
 .illustration {
-  $offset-x: 9.7222222%; /* 140px */
+  $offset-x: 9.7222222%;
 
   --height: 87%;
   --edge-x: calc(50% + #{$offset-x});
 
   &__img {
     display: inline-block;
-    // display: none;
+    max-width: 29rem; /* 480px */
     width: 100%;
   }
 
   @include min-viewport(bp.$lg) {
     &__img {
+      max-width: none;
       width: auto;
       position: absolute;
       top: 50%;
