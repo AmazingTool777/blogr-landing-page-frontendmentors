@@ -7,5 +7,6 @@ setDropdown("navbar-menu", {
 	menuClassName: "hide-mobile",
 });
 
-// Set connect sublinks dropdown
-setDropdown("connect-sublinks");
+// Set the navbar sublinks dropdown
+const navbarMenuTargets = ["product-sublinks", "company-sublinks", "connect-sublinks"];
+navbarMenuTargets.forEach((target) => setDropdown(target));

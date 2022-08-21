@@ -24,23 +24,36 @@
         </button>
         <div id="navbar-menu" class="navbar__menu | hide-mobile show-desktop px-auto rounded-sm">
           <ul class="navbar__links | flex-fill" >
-            <li>
-              <a href="#" class="navbar__link">
+            <li class="position-relative">
+              <a href="#" class="navbar__link" data-toggle="product-sublinks">
                 Product
                 <picture>
                   <source media="(min-width: 992px)" srcset="assets/images/icon-arrow-light.svg">
                   <img src="assets/images/icon-arrow-dark.svg" alt="Navbar link arrow" class="navbar__arrow">
                 </picture>
               </a>
+              <ul id="product-sublinks" class="navbar__submenu | rounded-sm py-2" >
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Overview</a></li>
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Pricing</a></li>
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Marketplace</a></li>
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Features</a></li>
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Integrations</a></li>
+              </ul>
             </li>
-            <li>
-              <a href="#" class="navbar__link">
+            <li class="position-relative">
+              <a href="#" class="navbar__link" data-toggle="company-sublinks">
                 Company
                 <picture>
                   <source media="(min-width: 992px)" srcset="assets/images/icon-arrow-light.svg">
                   <img src="assets/images/icon-arrow-dark.svg" alt="Navbar link arrow" class="navbar__arrow">
                 </picture>
               </a>
+              <ul id="company-sublinks" class="navbar__submenu | rounded-sm py-2" >
+                <li><a href="#" class="navbar__sublink | px-3 py-1">About</a></li>
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Team</a></li>
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Blog</a></li>
+                <li><a href="#" class="navbar__sublink | px-3 py-1">Career</a></li>
+              </ul>
             </li>
             <li class="position-relative">
               <a href="#" class="navbar__link" data-toggle="connect-sublinks">

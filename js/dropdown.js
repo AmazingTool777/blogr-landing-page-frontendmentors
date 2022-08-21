@@ -5,8 +5,8 @@ const defaultOptions = {
 };
 
 // Function that toggles the classNames of dropdowns on click
-function toggleDropdown(e, toggle, menu, options) {
-	e.stopPropagation();
+function toggleDropdown(toggle, menu, options) {
+	// e.stopPropagation();
 	toggle.classList.toggle(options.toggleClassName);
 	menu.classList.toggle(options.menuClassName);
 }
@@ -17,13 +17,13 @@ export default function setDropdown(toggleTarget, _options = defaultOptions) {
 	const toggle = document.querySelector(`[data-toggle="${toggleTarget}"]`);
 	const menu = document.getElementById(toggleTarget);
 	let isOpen = false;
-	toggle.onclick = (e) => {
-		toggleDropdown(e, toggle, menu, options);
+	toggle.onclick = () => {
+		toggleDropdown(toggle, menu, options);
 		isOpen = !isOpen;
 	};
 	window.addEventListener("click", (e) => {
-		if (isOpen && !menu.contains(e.target)) {
-			toggleDropdown(e, toggle, menu, options);
+		if (isOpen && !menu.contains(e.target) && !toggle.isSameNode(e.target) && !toggle.contains(e.target)) {
+			toggleDropdown(toggle, menu, options);
 			isOpen = false;
 		}
 	});
