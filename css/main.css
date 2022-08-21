@@ -626,6 +626,9 @@ main {
   }
 }
 @media only screen and (min-width: 62rem) {
+  .soaf-article {
+    --phone-img-height: 31.25rem;
+  }
   .soaf-article__illustration-img {
     position: absolute;
     top: 50%;
@@ -638,11 +641,17 @@ main {
     padding-top: 3rem;
   }
 }
-@media only screen and (min-width: 72.6875rem) {
+@media only screen and (min-width: 72.75rem) {
+  .soaf-article .article {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+}
+@media only screen and (min-width: 85.5rem) {
   .soaf-article {
-    --phone-img-height: 34.75rem;
-    --phone-img-offset-x: -3.2rem;
-    --phone-img-offset-y: 1.125rem;
+    --phone-img-height: 40rem;
+    --phone-img-offset-x: -3.3rem;
+    --phone-img-offset-y: 1.4rem;
   }
   .soaf-article .article {
     padding-bottom: 6.75rem;

@@ -38,6 +38,8 @@
   }
 
   @include min-viewport(bp.$lg) {
+    --phone-img-height: 31.25rem; // 500px
+
     &__illustration-img {
       position: absolute;
       top: 50%;
@@ -53,11 +55,20 @@
     }
   }
 
-  // 1163px
-  @include min-viewport(72.6875rem) {
-    --phone-img-height: 34.75rem; // 556px
-    --phone-img-offset-x: -3.2rem;
-    --phone-img-offset-y: 1.125rem;
+  // 1164px
+  @include min-viewport(72.75rem) {
+    // Overriding the article component's rules within this feature
+    .article {
+      padding-bottom: 4rem; // 112px
+      padding-top: 4rem;
+    }
+  }
+
+  // 1368px
+  @include min-viewport(85.5rem) {
+    --phone-img-height: 40rem; // 500px
+    --phone-img-offset-x: -3.3rem;
+    --phone-img-offset-y: 1.4rem;
     
     // Overriding the article component's rules within this feature
     .article {
@@ -71,15 +82,14 @@
     font-size: t.getFontSize(7);
   }
 
+  /* 
+  * Circle bg size and position across viewports
+  */
+
   // 436px
   @include min-viewport(27.25rem) {
     --circle-bg-position: 50% -270px;
   }
-
-
-  /* 
-  * Circle bg size and position across viewports
-  */
 
   // 496px
   @include min-viewport(31rem) {
