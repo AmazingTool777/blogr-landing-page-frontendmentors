@@ -24,6 +24,6 @@
   // Light version
   &--light {
     --article-title-color: #fff;
-    --article-content-color: #fff;
+    --article-content-color:  #{c.getColor(c.$neutral, "grayish-blue")};
   }
 }

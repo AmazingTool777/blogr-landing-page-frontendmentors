@@ -16,10 +16,10 @@
     max-width: $max-width; /* 1116px */
   }
 
-  // $no-padding-viewport: $max-width + 2 * $padding-x;
-  // @include min-viewport($no-padding-viewport) {
-  //   padding: 0;
-  // }
+  $no-padding-viewport: $max-width + 2 * $padding-x;
+  @include min-viewport($no-padding-viewport) {
+    padding: 0;
+  }
 }
 
 // Display inline-block
@@ -185,6 +185,16 @@
 
 .rounded-sm {
   border-radius: 5px;
+}
+
+
+// Rounded corners for content box
+$box-border-radius: 6.125rem; /* 98px */
+.box-rounded-top-right {
+  border-top-right-radius: $box-border-radius;
+}
+.box-rounded-bottom-left {
+  border-bottom-left-radius: $box-border-radius;
 }
 
 /* * */

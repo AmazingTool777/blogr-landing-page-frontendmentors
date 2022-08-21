@@ -4,6 +4,7 @@
 @use "../mixins" as *;
 
 .future-section {
+  padding-bottom: calc(var(--section-spacing-2) + var(--phone-img-height) * 0.5);
 
   &__title {
     font-weight: 600;

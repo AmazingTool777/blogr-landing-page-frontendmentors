@@ -1,0 +1,112 @@
+@use "../variables/colors" as c;
+@use "../variables/typography" as t;
+@use "../variables/breakpoints" as bp;
+@use "../mixins" as *;
+
+.soaf-article {
+  $py: 7.25rem; // 116px
+
+  --circle-bg-position: 50% -248px;
+  --circle-bg-size: 155%;
+  --phone-img-height: 30rem; // 480px
+  --phone-img-offset-x: -1rem;
+  --phone-img-offset-y: 1rem;
+
+  background:
+    url("../../assets/images/bg-pattern-circles.svg") var(--circle-bg-position) no-repeat,
+    linear-gradient(
+      to bottom right,
+      c.getColor(c.$gradient, "very-dark-gray-blue"),
+      c.getColor(c.$gradient, "very-dark-desaturated-blue")
+    );
+  background-size: var(--circle-bg-size), cover;
+  
+  &__illustration-img {
+    height: var(--phone-img-height);
+    margin-top: calc(-0.5 * var(--phone-img-height));
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  // Overriding the article component's rules within this feature
+  .article {
+    padding-bottom: $py;
+
+    @include min-viewport(bp.$lg) {
+      padding-bottom: 6.75rem; // 108px
+      padding-top: $py;
+    }
+  }
+
+  @include min-viewport(bp.$lg) {
+    &__illustration-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(calc(-50% + var(--phone-img-offset-x)), calc(-50% + var(--phone-img-offset-y)));
+      margin-top: 0;
+    }
+    
+    // Overriding the article component's rules within this feature
+    .article {
+      padding-bottom: 3rem; // 54px
+      padding-top: 3rem;
+    }
+  }
+
+  // 1163px
+  @include min-viewport(72.6875rem) {
+    --phone-img-height: 34.75rem; // 556px
+    --phone-img-offset-x: -3.2rem;
+    --phone-img-offset-y: 1.125rem;
+    
+    // Overriding the article component's rules within this feature
+    .article {
+      padding-bottom: 6.75rem; // 108px
+      padding-top: $py;
+    }
+  }
+
+  // Article title's font-size exception
+  .article__title {
+    font-size: t.getFontSize(7);
+  }
+
+  // 436px
+  @include min-viewport(27.25rem) {
+    --circle-bg-position: 50% -270px;
+  }
+
+
+  /* 
+  * Circle bg size and position across viewports
+  */
+
+  // 496px
+  @include min-viewport(31rem) {
+    --circle-bg-position: 50% -330px;
+  }
+
+  // 532px
+  @include min-viewport(33.25rem) {
+    --circle-bg-size: 100%;
+    --circle-bg-position: 50% -240px;
+  }
+
+  // 610px
+  @include min-viewport(38.625rem) {
+    --circle-bg-size: 60%;
+    --circle-bg-position: 50% -100px;
+  }
+
+  // 674px
+  @include min-viewport(42.125rem) {
+    --circle-bg-position: 50% -150px;
+  }
+
+  @include min-viewport(bp.$lg) {
+    --circle-bg-position: -30% bottom;
+  }
+
+  /* * */
+}

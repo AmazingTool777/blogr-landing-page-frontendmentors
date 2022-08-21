@@ -90,7 +90,13 @@ main {
     --section-spacing-1: 4.875rem; /* 78px */
     --section-spacing-2: 19.125rem; /* 306px */
   }
-} /* Container */
+}
+
+main {
+  --phone-img-height: 21.5rem;
+}
+
+/* Container */
 .container {
   width: auto;
   margin: 0 auto;
@@ -100,6 +106,11 @@ main {
 @media only screen and (min-width: 62rem) {
   .container {
     max-width: 69.75rem; /* 1116px */
+  }
+}
+@media only screen and (min-width: 72.75rem) {
+  .container {
+    padding: 0;
   }
 }
 
@@ -246,6 +257,15 @@ main {
   border-radius: 5px;
 }
 
+/* 98px */
+.box-rounded-top-right {
+  border-top-right-radius: 6.125rem;
+}
+
+.box-rounded-bottom-left {
+  border-bottom-left-radius: 6.125rem;
+}
+
 /* * */
 /* 
 * LINE-HEIGHT
@@ -323,7 +343,7 @@ main {
 }
 .article--light {
   --article-title-color: #fff;
-  --article-content-color: #fff;
+  --article-content-color: hsl(240deg, 2%, 79%);
 }
 
 .illustration {
@@ -552,6 +572,9 @@ main {
     border-color: var(--bg-color);
   }
 }
+.future-section {
+  padding-bottom: calc(var(--section-spacing-2) + var(--phone-img-height) * 0.5);
+}
 .future-section__title {
   font-weight: 600;
   text-align: center;
@@ -568,5 +591,93 @@ main {
   .future-section {
     padding-top: 9.75rem;
     padding-bottom: 16.25rem;
+  }
+}
+
+.soaf-article {
+  --circle-bg-position: 50% -248px;
+  --circle-bg-size: 155%;
+  --phone-img-height: 30rem;
+  --phone-img-offset-x: -1rem;
+  --phone-img-offset-y: 1rem;
+  background: url("../../assets/images/bg-pattern-circles.svg") var(--circle-bg-position) no-repeat, linear-gradient(to bottom right, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
+  background-size: var(--circle-bg-size), cover;
+  /* 
+  * Circle bg size and position across viewports
+  */
+  /* * */
+}
+.soaf-article__illustration-img {
+  height: var(--phone-img-height);
+  margin-top: calc(-0.5 * var(--phone-img-height));
+  margin-left: auto;
+  margin-right: auto;
+}
+.soaf-article .article {
+  padding-bottom: 7.25rem;
+}
+@media only screen and (min-width: 62rem) {
+  .soaf-article .article {
+    padding-bottom: 6.75rem;
+    padding-top: 7.25rem;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  .soaf-article__illustration-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + var(--phone-img-offset-x)), calc(-50% + var(--phone-img-offset-y)));
+    margin-top: 0;
+  }
+  .soaf-article .article {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
+@media only screen and (min-width: 72.6875rem) {
+  .soaf-article {
+    --phone-img-height: 34.75rem;
+    --phone-img-offset-x: -3.2rem;
+    --phone-img-offset-y: 1.125rem;
+  }
+  .soaf-article .article {
+    padding-bottom: 6.75rem;
+    padding-top: 7.25rem;
+  }
+}
+.soaf-article .article__title {
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 27.25rem) {
+  .soaf-article {
+    --circle-bg-position: 50% -270px;
+  }
+}
+@media only screen and (min-width: 31rem) {
+  .soaf-article {
+    --circle-bg-position: 50% -330px;
+  }
+}
+@media only screen and (min-width: 33.25rem) {
+  .soaf-article {
+    --circle-bg-size: 100%;
+    --circle-bg-position: 50% -240px;
+  }
+}
+@media only screen and (min-width: 38.625rem) {
+  .soaf-article {
+    --circle-bg-size: 60%;
+    --circle-bg-position: 50% -100px;
+  }
+}
+@media only screen and (min-width: 42.125rem) {
+  .soaf-article {
+    --circle-bg-position: 50% -150px;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  .soaf-article {
+    --circle-bg-position: -30% bottom;
   }
 }/*# sourceMappingURL=main.css.map */
