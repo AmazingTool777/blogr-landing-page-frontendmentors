@@ -1,0 +1,51 @@
+@use "../variables/colors" as c;
+@use "../variables/typography" as t;
+@use "../variables/breakpoints" as bp;
+@use "../mixins" as *;
+
+.footer {
+  $spacing: 4.5rem; // 72px
+
+  --font-size: #{t.getFontSize(3)};
+
+  background-color: c.getColor(c.$neutral, "very-dark-black-blue");
+  padding-top: $spacing;
+  padding-bottom: $spacing;
+  font-family: t.getFontFamily("secondary");
+
+  &__brand {
+    width: 6.375rem; // 102px
+  }
+
+  &__section:not(:last-child) {
+    margin-bottom: 3rem; // 48px
+  }
+
+  &__heading {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 2.125rem; // 34px
+  }
+
+  &__link {
+    color: c.getColor(c.$neutral, "grayish-blue");
+    padding: 0.4rem 0;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__heading, &__link {
+    font-size: var(--font-size);
+  }
+
+  @include min-viewport(bp.$lg) {
+    --font-size: #{t.getFontSize(2)};
+
+    &__section, &__section:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}

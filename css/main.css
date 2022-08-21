@@ -81,12 +81,12 @@ a {
   transition: 0.3s;
 }
 
-main {
+:root {
   --section-spacing-1: 2.75rem; /* 44px */
   --section-spacing-2: 6.375rem; /* 102px */
 }
 @media only screen and (min-width: 62rem) {
-  main {
+  :root {
     --section-spacing-1: 4.875rem; /* 78px */
     --section-spacing-2: 19.125rem; /* 306px */
   }
@@ -687,4 +687,42 @@ main {
 
 .section-2 .illustration {
   --height: 76%;
+}
+
+.footer {
+  --font-size: 1.125rem;
+  background-color: hsl(240deg, 10%, 16%);
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  font-family: Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.footer__brand {
+  width: 6.375rem;
+}
+.footer__section:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.footer__heading {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 2.125rem;
+}
+.footer__link {
+  color: hsl(240deg, 2%, 79%);
+  padding: 0.4rem 0;
+  font-weight: 400;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__heading, .footer__link {
+  font-size: var(--font-size);
+}
+@media only screen and (min-width: 62rem) {
+  .footer {
+    --font-size: 1rem;
+  }
+  .footer__section, .footer__section:not(:last-child) {
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
