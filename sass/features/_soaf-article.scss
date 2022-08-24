@@ -1,5 +1,6 @@
 @use "../variables/colors" as c;
 @use "../variables/typography" as t;
+@use "../variables/spacings" as s;
 @use "../variables/breakpoints" as bp;
 @use "../mixins" as *;
 
@@ -66,14 +67,14 @@
 
   // 1368px
   @include min-viewport(85.5rem) {
-    --phone-img-height: 40rem; // 500px
-    --phone-img-offset-x: -3.3rem;
-    --phone-img-offset-y: 1.4rem;
+    --phone-img-height: 35rem; // 560px
+    --phone-img-offset-x: -3.1rem;
+    --phone-img-offset-y: 1.2rem;
     
     // Overriding the article component's rules within this feature
     .article {
-      padding-bottom: 6.75rem; // 108px
-      padding-top: $py;
+      // padding-bottom: 6.75rem = 108px
+      padding: $py s.getSpacing(1) 6.75rem 0;
     }
   }
 

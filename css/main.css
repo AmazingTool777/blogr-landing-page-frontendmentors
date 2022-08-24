@@ -649,13 +649,12 @@ main {
 }
 @media only screen and (min-width: 85.5rem) {
   .soaf-article {
-    --phone-img-height: 40rem;
-    --phone-img-offset-x: -3.3rem;
-    --phone-img-offset-y: 1.4rem;
+    --phone-img-height: 35rem;
+    --phone-img-offset-x: -3.1rem;
+    --phone-img-offset-y: 1.2rem;
   }
   .soaf-article .article {
-    padding-bottom: 6.75rem;
-    padding-top: 7.25rem;
+    padding: 7.25rem 0.6666666667rem 6.75rem 0;
   }
 }
 .soaf-article .article__title {
