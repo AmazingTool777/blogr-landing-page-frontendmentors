@@ -2,10 +2,10 @@
 @use "../mixins" as *;
 
 .illustration {
-  $offset-x: 9.7222222%;
-
+  --offset-x: 9.7222222%;
+  --offset-y: 0%;
   --height: 87%;
-  --edge-x: calc(50% + #{$offset-x});
+  --edge-x: calc(50% + var(--offset-x));
 
   &__img {
     display: inline-block;
@@ -19,7 +19,7 @@
       width: auto;
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(calc(-50% + var(--offset-y)));
       height: var(--height);
     }
 
