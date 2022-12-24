@@ -77,8 +77,8 @@ Finally, I will dive a little deeper on the techniques of background images posi
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/ToolTra)
-- Instagram - [@yourusername](https://www.instagram.com/amazing_tool)
+- Frontend Mentor - [@ToolTra](https://www.frontendmentor.io/profile/ToolTra)
+- Instagram - [@amazing_tool](https://www.instagram.com/amazing_tool)
 
 ## Acknowledgments
 
