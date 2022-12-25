@@ -14,7 +14,7 @@
   height: 37.5rem; /* 600px */
   padding-top: s.getSpacing(5);
   background:
-    url("../../assets/images/bg-pattern-intro.svg") var(--img-bg-position) no-repeat,
+    url("../assets/images/bg-pattern-intro.svg") var(--img-bg-position) no-repeat,
     linear-gradient(
       to bottom right,
       c.getColor(c.$gradient, "light-red"),
