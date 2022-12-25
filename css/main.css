@@ -37,31 +37,6 @@ ul, ol {
 /* 
 * TYPOGRAPHY
 */
-@font-face {
-  font-family: Overpass;
-  font-weight: 300;
-  src: url("../../assets/fonts/Overpass/static/Overpass-Light.ttf");
-}
-@font-face {
-  font-family: Overpass;
-  font-weight: 600;
-  src: url("../../assets/fonts/Overpass/static/Overpass-Medium.ttf");
-}
-@font-face {
-  font-family: Ubuntu;
-  font-weight: 400;
-  src: url("../../assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
-}
-@font-face {
-  font-family: Ubuntu;
-  font-weight: 500;
-  src: url("../../assets/fonts/Ubuntu/Ubuntu-Medium.ttf");
-}
-@font-face {
-  font-family: Ubuntu;
-  font-weight: 700;
-  src: url("../../assets/fonts/Ubuntu/Ubuntu-Bold.ttf");
-}
 body {
   font-family: Overpass;
   text-align: center;

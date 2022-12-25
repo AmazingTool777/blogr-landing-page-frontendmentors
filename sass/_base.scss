@@ -8,25 +8,25 @@
 */
 
 // Defines a font-face
-@mixin fontFace($family, $weight, $src) {
-    font-family: $family;
-    font-weight: $weight;
-    src: $src;
-}
+// @mixin fontFace($family, $weight, $src) {
+//     font-family: $family;
+//     font-weight: $weight;
+//     src: $src;
+// }
 
-// Primary font-face
-@each $weight, $src in map-get(t.$primary, "weights") {
-  @font-face {
-    @include fontFace(map-get(t.$primary, "family"), $weight, $src);
-  }
-}
+// // Primary font-face
+// @each $weight, $src in map-get(t.$primary, "weights") {
+//   @font-face {
+//     @include fontFace(map-get(t.$primary, "family"), $weight, $src);
+//   }
+// }
 
-// Secondary font-face
-@each $weight, $src in map-get(t.$secondary, "weights") {
-  @font-face {
-    @include fontFace(map-get(t.$secondary, "family"), $weight, $src);
-  }
-}
+// // Secondary font-face
+// @each $weight, $src in map-get(t.$secondary, "weights") {
+//   @font-face {
+//     @include fontFace(map-get(t.$secondary, "family"), $weight, $src);
+//   }
+// }
 
 body {
   font-family: t.getFontFamily("primary");
