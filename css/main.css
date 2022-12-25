@@ -358,7 +358,7 @@ main {
   --intro-font-size: 2.25rem; /* 36px */
   height: 37.5rem; /* 600px */
   padding-top: 3.375rem;
-  background: url("../../assets/images/bg-pattern-intro.svg") var(--img-bg-position) no-repeat, linear-gradient(to bottom right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  background: url("../assets/images/bg-pattern-intro.svg") var(--img-bg-position) no-repeat, linear-gradient(to bottom right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
   background-size: var(--img-bg-size), cover;
   color: #fff;
   /* Styling the main container in the context of the navbar / Hero */
@@ -583,7 +583,7 @@ main {
   --circle-bg-size: 155%;
   --phone-img-offset-x: -1rem;
   --phone-img-offset-y: 1rem;
-  background: url("../../assets/images/bg-pattern-circles.svg") var(--circle-bg-position) no-repeat, linear-gradient(to bottom right, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
+  background: url("../assets/images/bg-pattern-circles.svg") var(--circle-bg-position) no-repeat, linear-gradient(to bottom right, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
   background-size: var(--circle-bg-size), cover;
   /* 
   * Circle bg size and position across viewports

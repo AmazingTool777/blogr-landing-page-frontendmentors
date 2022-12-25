@@ -13,7 +13,7 @@
   --phone-img-offset-y: 1rem;
 
   background:
-    url("../../assets/images/bg-pattern-circles.svg") var(--circle-bg-position) no-repeat,
+    url("../assets/images/bg-pattern-circles.svg") var(--circle-bg-position) no-repeat,
     linear-gradient(
       to bottom right,
       c.getColor(c.$gradient, "very-dark-gray-blue"),
