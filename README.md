@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-The site is live at the following link: https://tooltra.github.io/blogr-landing-page-frontendmentors/
+The site is live at the following link: https://AmazingTool777.github.io/blogr-landing-page-frontendmentors/
 
 ## My process
 
